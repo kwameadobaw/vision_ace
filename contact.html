@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Vision Ace Eye Associates</title>
+  <meta name="description" content="Get in touch with Vision Ace Eye Associates. Find our locations, opening hours, and send us a message."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Vision <em>Ace</em><br><small>Eye Associates</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our Doctors</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Contact</div>
+      <h1>Get in <em>Touch</em></h1>
+      <p>We're here to answer your questions and help you on your journey to better vision.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO CARDS -->
+  <section class="section contact-info-section">
+    <div class="container">
+      <div class="contact-info-grid">
+        <div class="contact-info-card reveal">
+          <div class="cic-icon">📍</div>
+          <h3>Main Location</h3>
+          <p>14 Optical Lane<br/>Accra, Greater Accra<br/>Ghana</p>
+          <a href="https://maps.google.com" target="_blank" class="cic-link">Get Directions →</a>
+        </div>
+        <div class="contact-info-card reveal">
+          <div class="cic-icon">📞</div>
+          <h3>Phone</h3>
+          <p><a href="tel:+233302000000">+233 30 200 0000</a><br/>
+          <a href="tel:+233302000001">+233 30 200 0001</a><br/>
+          <small>Emergency: <a href="tel:+233200000000">+233 20 000 0000</a></small></p>
+          <a href="tel:+233302000000" class="cic-link">Call Now →</a>
+        </div>
+        <div class="contact-info-card reveal">
+          <div class="cic-icon">✉️</div>
+          <h3>Email</h3>
+          <p><a href="mailto:info@visionaceeyeassociates.com">info@visionace<br/>eyeassociates.com</a><br/>
+          <a href="mailto:appointments@visionaceeyeassociates.com">appointments@<br/>visionaceeyeassociates.com</a></p>
+          <a href="mailto:info@visionaceeyeassociates.com" class="cic-link">Send Email →</a>
+        </div>
+        <div class="contact-info-card reveal">
+          <div class="cic-icon">🕐</div>
+          <h3>Opening Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 3:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+            <tr><td>Public Holidays</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + MAP -->
+  <section class="section contact-main">
+    <div class="container contact-grid">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap reveal">
+        <span class="section-tag">Send a Message</span>
+        <h2>We'd Love to <em>Hear from You</em></h2>
+        <p>Have a question about our services, insurance, or your upcoming visit? Send us a message and we'll get back to you within one business day.</p>
+        <form
+          action="https://formsubmit.co/kwame.adobawjnr@gmail.com"
+          method="POST"
+          id="contactForm"
+          class="contact-form"
+          novalidate
+        >
+          <input type="hidden" name="_subject" value="Website Enquiry – Vision Ace Eye Associates"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          <input type="hidden" name="_template" value="table"/>
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"/>
+          <input type="text" name="_honey" style="display:none"/>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cName">Full Name <span class="req">*</span></label>
+              <input type="text" id="cName" name="Full Name" placeholder="Your full name" required/>
+              <span class="field-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email <span class="req">*</span></label>
+              <input type="email" id="cEmail" name="Email" placeholder="your@email.com" required/>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cPhone">Phone Number</label>
+              <input type="tel" id="cPhone" name="Phone" placeholder="+233 XX XXX XXXX"/>
+            </div>
+            <div class="form-group">
+              <label for="cSubject">Subject <span class="req">*</span></label>
+              <select id="cSubject" name="Subject" required>
+                <option value="">Select a subject</option>
+                <option>General Inquiry</option>
+                <option>Appointment Question</option>
+                <option>Insurance & Billing</option>
+                <option>Results & Records</option>
+                <option>Complaint / Feedback</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Message <span class="req">*</span></label>
+            <textarea id="cMessage" name="Message" rows="6" placeholder="Type your message here..." required></textarea>
+            <span class="field-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <!-- MAP PLACEHOLDER + BRANCHES -->
+      <div class="contact-map-wrap reveal">
+        <div class="map-placeholder">
+          <div class="map-overlay">
+            <div class="map-pin-anim">📍</div>
+            <p>14 Optical Lane, Accra, Ghana</p>
+            <a href="https://maps.google.com/?q=Accra+Ghana" target="_blank" class="btn btn-sm">Open in Google Maps</a>
+          </div>
+        </div>
+        <div class="branches">
+          <h3>All <em>Locations</em></h3>
+          <div class="branch-card">
+            <strong>Accra – Main Branch</strong>
+            <p>14 Optical Lane, Accra</p>
+            <span>Mon–Fri: 8AM–6PM · Sat: 9AM–3PM</span>
+          </div>
+          <div class="branch-card">
+            <strong>Kumasi – Adum Branch</strong>
+            <p>22 Kejetia Road, Kumasi</p>
+            <span>Mon–Fri: 8AM–5PM · Sat: 9AM–2PM</span>
+          </div>
+          <div class="branch-card">
+            <strong>Takoradi – Harbour Branch</strong>
+            <p>5 Market Circle, Takoradi</p>
+            <span>Mon–Fri: 8AM–5PM · Sat: Closed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQs</span>
+        <h2>Frequently Asked <em>Questions</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you accept NHIS? <span class="faq-chevron">+</span></button>
+          <div class="faq-a">
+            <p>Yes, we accept the National Health Insurance Scheme (NHIS) for eligible services, including routine eye examinations and selected treatments. Please bring your valid NHIS card to your appointment. Some specialist procedures may require private payment or supplementary insurance.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How far in advance should I book? <span class="faq-chevron">+</span></button>
+          <div class="faq-a">
+            <p>We recommend booking at least 1–2 weeks in advance for routine eye exams. For specialist consultations and surgical procedures, 2–4 weeks' notice is ideal. Emergency or urgent cases can often be seen within 24–48 hours — please call us directly.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What should I bring to my first appointment? <span class="faq-chevron">+</span></button>
+          <div class="faq-a">
+            <p>Please bring a valid photo ID, your NHIS or insurance card, any current glasses or contact lens prescriptions, a list of medications you are taking, and any previous eye health records if available. Arrive 10–15 minutes early to complete registration forms.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Am I a candidate for LASIK? <span class="faq-chevron">+</span></button>
+          <div class="faq-a">
+            <p>LASIK candidacy depends on several factors including corneal thickness, prescription stability, pupil size, and overall eye health. Book a free LASIK candidacy assessment with us and our refractive surgery team will evaluate whether LASIK or an alternative (LASEK, SMILE) is right for you. Most people over 18 with stable prescriptions are suitable.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What payment methods do you accept? <span class="faq-chevron">+</span></button>
+          <div class="faq-a">
+            <p>We accept cash (GHS), all major debit and credit cards (Visa, Mastercard), mobile money (MTN MoMo, Telecel Cash, AirtelTigo Money), and direct insurance billing for covered services. Payment plans are available for elective surgical procedures — ask our patient coordinators for details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">Vision <em>Ace</em><br><small>Eye Associates</small></span>
+        </a>
+        <p>Dedicated to protecting and enhancing the gift of sight for our community and beyond.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#exams">Eye Exams</a></li>
+          <li><a href="services.html#lasik">LASIK Surgery</a></li>
+          <li><a href="services.html#cataract">Cataract Surgery</a></li>
+          <li><a href="services.html#glaucoma">Glaucoma Care</a></li>
+          <li><a href="services.html#pediatric">Pediatric Eye Care</a></li>
+          <li><a href="services.html#retina">Retinal Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>📍 14 Optical Lane, Accra, Ghana</li>
+          <li>📞 +233 30 200 0000</li>
+          <li>✉️ info@visionaceeyeassociates.com</li>
+          <li>🕐 Mon–Fri: 8AM – 6PM</li>
+          <li>🕐 Sat: 9AM – 3PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Vision Ace Eye Associates. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

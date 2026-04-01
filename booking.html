@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment – Vision Ace Eye Associates</title>
+  <meta name="description" content="Book your eye care appointment at Vision Ace Eye Associates online."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/booking.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Vision <em>Ace</em><br><small>Eye Associates</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Our Doctors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta active">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Book Appointment</div>
+      <h1>Book an <em>Appointment</em></h1>
+      <p>Fill out the form below and our team will confirm your appointment within 24 hours.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="section booking-section">
+    <div class="container booking-container">
+
+      <!-- STEPS -->
+      <div class="booking-steps reveal">
+        <div class="step active" data-step="1">
+          <div class="step-num">1</div>
+          <span>Your Details</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">
+          <div class="step-num">2</div>
+          <span>Appointment Info</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">
+          <div class="step-num">3</div>
+          <span>Review & Submit</span>
+        </div>
+      </div>
+
+      <div class="booking-layout">
+        <!-- FORM -->
+        <div class="booking-form-wrap reveal">
+          <!--
+            FormSubmit Configuration:
+            Replace YOUR_EMAIL@example.com with the clinic's actual email address.
+            FormSubmit will handle the form submission and send an email to that address.
+            No backend required.
+          -->
+          <form
+            action="https://formsubmit.co/kwame.adobawjnr@gmail.com"
+            method="POST"
+            id="bookingForm"
+            class="booking-form"
+            novalidate
+          >
+            <!-- FormSubmit hidden config fields -->
+            <input type="hidden" name="_subject" value="New Appointment Request – Vision Ace Eye Associates"/>
+            <input type="hidden" name="_captcha" value="false"/>
+            <input type="hidden" name="_template" value="table"/>
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"/>
+            <input type="text" name="_honey" style="display:none"/>
+
+            <!-- STEP 1: Personal Details -->
+            <fieldset class="form-step" id="step1">
+              <legend>Personal Information</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="req">*</span></label>
+                  <input type="text" id="firstName" name="First Name" placeholder="e.g. Ama" required/>
+                  <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="req">*</span></label>
+                  <input type="text" id="lastName" name="Last Name" placeholder="e.g. Mensah" required/>
+                  <span class="field-error"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="email" name="Email" placeholder="your@email.com" required/>
+                  <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="Phone Number" placeholder="+233 XX XXX XXXX" required/>
+                  <span class="field-error"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" id="dob" name="Date of Birth"/>
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="Gender">
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                    <option>Prefer not to say</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="isNewPatient">Patient Status <span class="req">*</span></label>
+                <select id="isNewPatient" name="Patient Status" required>
+                  <option value="">Select...</option>
+                  <option value="New Patient">New Patient</option>
+                  <option value="Returning Patient">Returning Patient</option>
+                </select>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-primary" id="toStep2">Continue →</button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 2: Appointment Details -->
+            <fieldset class="form-step hidden" id="step2">
+              <legend>Appointment Information</legend>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">Service Required <span class="req">*</span></label>
+                  <select id="service" name="Service Required" required>
+                    <option value="">Select a service</option>
+                    <option>Comprehensive Eye Exam</option>
+                    <option>LASIK / Refractive Surgery Consultation</option>
+                    <option>Cataract Surgery Consultation</option>
+                    <option>Glaucoma Screening / Management</option>
+                    <option>Pediatric Eye Exam</option>
+                    <option>Retinal Assessment</option>
+                    <option>Contact Lens Fitting</option>
+                    <option>Corneal Consultation</option>
+                    <option>Other / General Consultation</option>
+                  </select>
+                  <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="doctor">Preferred Doctor</label>
+                  <select id="doctor" name="Preferred Doctor">
+                    <option value="">No preference</option>
+                    <option>Dr. Esi Mensah</option>
+                    <option>Dr. Kweku Osei</option>
+                    <option>Dr. Abena Asante</option>
+                    <option>Dr. Kofi Boateng</option>
+                    <option>Dr. Efua Agyeman</option>
+                    <option>Dr. James Appiah</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="preferredDate">Preferred Date <span class="req">*</span></label>
+                  <input type="date" id="preferredDate" name="Preferred Date" required/>
+                  <span class="field-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="preferredTime">Preferred Time <span class="req">*</span></label>
+                  <select id="preferredTime" name="Preferred Time" required>
+                    <option value="">Select a time</option>
+                    <option>8:00 AM – 9:00 AM</option>
+                    <option>9:00 AM – 10:00 AM</option>
+                    <option>10:00 AM – 11:00 AM</option>
+                    <option>11:00 AM – 12:00 PM</option>
+                    <option>1:00 PM – 2:00 PM</option>
+                    <option>2:00 PM – 3:00 PM</option>
+                    <option>3:00 PM – 4:00 PM</option>
+                    <option>4:00 PM – 5:00 PM</option>
+                  </select>
+                  <span class="field-error"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="location">Preferred Location <span class="req">*</span></label>
+                <select id="location" name="Preferred Location" required>
+                  <option value="">Select a location</option>
+                  <option>Accra – Optical Lane (Main Branch)</option>
+                  <option>Kumasi – Adum Branch</option>
+                  <option>Takoradi – Harbour Branch</option>
+                </select>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="insurance">Medical Insurance Provider</label>
+                <input type="text" id="insurance" name="Insurance Provider" placeholder="e.g. NHIS, GLICO, Enterprise"/>
+              </div>
+              <div class="form-group">
+                <label for="symptoms">Reason for Visit / Symptoms</label>
+                <textarea id="symptoms" name="Reason for Visit" rows="4" placeholder="Please describe your symptoms or reason for your visit..."></textarea>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline" id="toStep1">← Back</button>
+                <button type="button" class="btn btn-primary" id="toStep3">Review →</button>
+              </div>
+            </fieldset>
+
+            <!-- STEP 3: Review -->
+            <fieldset class="form-step hidden" id="step3">
+              <legend>Review & Confirm</legend>
+              <div class="review-box" id="reviewBox">
+                <!-- filled by JS -->
+              </div>
+              <div class="form-group consent-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Consent" value="Agreed" required id="consentCheck"/>
+                  <span>I confirm that the information provided is accurate and I consent to Vision Ace Eye Associates contacting me regarding my appointment. <span class="req">*</span></span>
+                </label>
+                <span class="field-error" id="consentError"></span>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline" id="backToStep2">← Back</button>
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                  <span class="btn-text">Confirm Appointment</span>
+                  <span class="btn-loader hidden">⟳</span>
+                </button>
+              </div>
+            </fieldset>
+
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="booking-sidebar reveal">
+          <div class="sidebar-card">
+            <h3>📋 What to Expect</h3>
+            <ul>
+              <li>You'll receive an email confirmation within 24 hours.</li>
+              <li>Bring any previous prescriptions or medical records.</li>
+              <li>Arrive 10 minutes early to complete patient paperwork.</li>
+              <li>If dilated drops are planned, arrange transport as you may not drive.</li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <h3>📞 Need Help?</h3>
+            <p>Prefer to book by phone? Call us directly:</p>
+            <a href="tel:+233302000000" class="sidebar-phone">+233 30 200 0000</a>
+            <p class="sidebar-hours">Mon–Fri: 8AM – 6PM<br/>Sat: 9AM – 3PM</p>
+          </div>
+          <div class="sidebar-card">
+            <h3>⏱ Appointment Duration</h3>
+            <ul class="duration-list">
+              <li><span>Eye Exam</span><span>45–90 min</span></li>
+              <li><span>LASIK Consult</span><span>60–90 min</span></li>
+              <li><span>Cataract Consult</span><span>60 min</span></li>
+              <li><span>Glaucoma Check</span><span>30–60 min</span></li>
+              <li><span>Pediatric Exam</span><span>45–60 min</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">Vision <em>Ace</em><br><small>Eye Associates</small></span>
+        </a>
+        <p>Dedicated to protecting and enhancing the gift of sight for our community and beyond.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#exams">Eye Exams</a></li>
+          <li><a href="services.html#lasik">LASIK Surgery</a></li>
+          <li><a href="services.html#cataract">Cataract Surgery</a></li>
+          <li><a href="services.html#glaucoma">Glaucoma Care</a></li>
+          <li><a href="services.html#pediatric">Pediatric Eye Care</a></li>
+          <li><a href="services.html#retina">Retinal Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>📍 14 Optical Lane, Accra, Ghana</li>
+          <li>📞 +233 30 200 0000</li>
+          <li>✉️ info@visionaceeyeassociates.com</li>
+          <li>🕐 Mon–Fri: 8AM – 6PM</li>
+          <li>🕐 Sat: 9AM – 3PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Vision Ace Eye Associates. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

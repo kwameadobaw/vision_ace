@@ -1,0 +1,130 @@
+/* ============================================================
+   VISION ACE – Services Page Styles
+   css/services.css
+   ============================================================ */
+
+/* ---------- TAB NAV ---------- */
+.services-intro { padding: 3rem 0 0; background: var(--white); }
+
+.services-tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.stab {
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  border: 2px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--white);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.stab:hover,
+.stab.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+/* ---------- SERVICE DETAIL SECTIONS ---------- */
+.service-detail {
+  padding: 6rem 0;
+  background: var(--white);
+}
+.service-detail.alt {
+  background: var(--bg);
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sd-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-icon-bg {
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal-pale) 0%, rgba(13,122,110,0.05) 100%);
+  border: 2px dashed rgba(13,122,110,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  transition: var(--transition);
+  animation: breatheIcon 5s ease-in-out infinite;
+}
+@keyframes breatheIcon {
+  0%,100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+.service-detail:hover .sd-icon-bg {
+  border-color: var(--teal);
+  background: var(--teal-pale);
+}
+
+.sd-content .section-tag { display: inline-block; margin-bottom: 1rem; }
+.sd-content h2 { margin-bottom: 1.25rem; }
+.sd-content > p { font-size: 1rem; line-height: 1.75; margin-bottom: 1.5rem; }
+
+.sd-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.sd-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.sd-list li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.sd-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.sd-meta span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+/* ---------- RESPONSIVE SERVICES ---------- */
+@media (max-width: 900px) {
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  /* On mobile, keep content before visual */
+  .service-detail.alt .service-detail-grid .sd-content { order: 1; }
+  .service-detail.alt .service-detail-grid .sd-visual  { order: 2; }
+  .sd-icon-bg { width: 200px; height: 200px; font-size: 3.5rem; }
+}

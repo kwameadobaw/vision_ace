@@ -1,0 +1,178 @@
+/* ============================================================
+   VISION ACE – Contact Page Styles
+   css/contact.css
+   ============================================================ */
+
+/* ---------- CONTACT INFO CARDS ---------- */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.contact-info-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+  text-align: center;
+}
+.contact-info-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--teal);
+  transform: translateY(-4px);
+}
+
+.cic-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.contact-info-card h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+.contact-info-card p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
+.contact-info-card a { color: var(--text-muted); transition: var(--transition); }
+.contact-info-card a:hover { color: var(--teal); }
+
+.hours-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.hours-table td { padding: 0.3rem 0.4rem; text-align: left; color: var(--text-muted); }
+.hours-table td:last-child { text-align: right; font-weight: 500; color: var(--navy); }
+
+.cic-link {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--teal);
+  transition: var(--transition);
+}
+.cic-link:hover { color: var(--teal-light); letter-spacing: 0.03em; }
+
+/* ---------- CONTACT MAIN ---------- */
+.contact-main { background: var(--bg); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Form */
+.contact-form-wrap .section-tag { display: inline-block; margin-bottom: 1rem; }
+.contact-form-wrap h2 { margin-bottom: 1rem; }
+.contact-form-wrap > p { margin-bottom: 2rem; font-size: 1rem; line-height: 1.7; }
+
+.contact-form .form-group { margin-bottom: 1.25rem; }
+
+.contact-form button[type="submit"] { margin-top: 0.5rem; }
+
+/* Map + Branches */
+.map-placeholder {
+  height: 260px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.map-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(13,163,147,0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.map-overlay {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+}
+.map-pin-anim {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  animation: pinBounce 2s ease-in-out infinite;
+}
+@keyframes pinBounce {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.map-overlay p { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 1rem; }
+
+.branches h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+
+.branch-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  transition: var(--transition);
+}
+.branch-card:hover { border-color: var(--teal); box-shadow: var(--shadow-sm); }
+.branch-card strong { display: block; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.25rem; }
+.branch-card p { font-size: 0.85rem; margin-bottom: 0.25rem; }
+.branch-card span { font-size: 0.78rem; color: var(--teal); font-weight: 600; }
+
+/* ---------- FAQ ---------- */
+.faq-section { background: var(--white); }
+.faq-list { max-width: 780px; margin: 0 auto; }
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: var(--white);
+  transition: var(--transition);
+}
+.faq-item:hover { border-color: var(--teal-light); }
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: left;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.faq-q:hover { color: var(--teal); }
+.faq-q.open { color: var(--teal); }
+
+.faq-chevron {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--teal);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.faq-q.open .faq-chevron { transform: rotate(45deg); }
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+.faq-a.open {
+  max-height: 300px;
+  padding: 0 1.5rem 1.5rem;
+}
+.faq-a p { font-size: 0.92rem; line-height: 1.75; }
+
+/* ---------- RESPONSIVE CONTACT ---------- */
+@media (max-width: 1024px) {
+  .contact-info-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-info-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .contact-info-grid { grid-template-columns: 1fr; }
+}
